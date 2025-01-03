@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/calculadora/calculadora.iml" filepath="$PROJECT_DIR$/calculadora/calculadora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calculadora 1 projeto/calculadora.iml" filepath="$PROJECT_DIR$/calculadora 1 projeto/calculadora.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-70Dias.iml" filepath="$PROJECT_DIR$/.idea/java-70Dias.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pet shop 2 projeto/pet shop.iml" filepath="$PROJECT_DIR$/pet shop 2 projeto/pet shop.iml" />
     </modules>
   </component>
 </project>
