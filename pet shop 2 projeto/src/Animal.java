@@ -1,18 +1,20 @@
     public class Animal {
         private String nome;
-        private String dono;
         private String tamanho;
         private int idade;
+
+        public String getNome() {
+            return nome;
+        }
+
+        public void setNome(String nome) {
+            this.nome = nome;
+
+        }
+
         private double peso;
 
-        public String dono() {
-            return dono;
-        }
 
-        public Animal setDono(String dono) {
-            this.dono = dono;
-            return this;
-        }
 
         public int idade() {
             return idade;
@@ -23,14 +25,7 @@
             return this;
         }
 
-        public String nome() {
-            return nome;
-        }
 
-        public Animal setNome(String nome) {
-            this.nome = nome;
-            return this;
-        }
 
         public double peso() {
             return peso;
