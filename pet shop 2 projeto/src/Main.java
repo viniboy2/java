@@ -12,7 +12,7 @@ Scanner leitura = new Scanner(System.in);
   int opcao = leitura.nextInt();
   swith (opcao){
         case 1 : // esse animal é um cachorro
-          Animal
+          Animal 
       }
     }
 }
