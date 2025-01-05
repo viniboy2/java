@@ -1,7 +1,7 @@
 public class cachorroOUgato extends Animal{
     private String CorDoPelo;
 
-    public String CorDoPelo() {
+    public String  getCorDoPelo() {
         return CorDoPelo;
     }
 

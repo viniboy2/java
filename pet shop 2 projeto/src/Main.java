@@ -19,7 +19,21 @@ public class Main {
                 System.out.println("Digite o nome do seu cachorro:");
                 String nome1 = scanner.nextLine();
                 cachorro.setNome(nome1); // Atribuir o nome
-                System.out.println("O nome do cachorro é: " + cachorro.getNome()); // Exibir o nome
+                System.out.println("digite a idade do " + cachorro.getNome());
+                 float idade1 = scanner.nextFloat();
+                scanner.nextLine();
+                cachorro.setIdade(idade1);
+                System.out.println("digite o porte do " + cachorro.getNome() + "PEQUENO MEDIO OU GRANDE");
+                String tamanhodog = scanner.nextLine();
+                cachorro.setTamanho(tamanhodog);
+                System.out.println("digite a cor do pelo do" + cachorro.getNome());
+                String Cordopelo = scanner.nextLine();
+                cachorro.setCorDoPelo(Cordopelo);
+                System.out.println("\nInformações do cachorro:");
+                System.out.println("Nome: " + cachorro.getNome());
+                System.out.println("Idade: " + cachorro.getIdade() + " anos");
+                System.out.println("Porte: " + cachorro.getTamanho());
+                System.out.println("Cor do pelo: " + cachorro.getCorDoPelo());
 
                 break;
             case 2 : // aqui é um gato
