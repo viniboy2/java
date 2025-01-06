@@ -1,7 +1,7 @@
 public class ave extends Animal{
     private String CorDasPenas;
 
-    public String CorDasPenas() {
+    public String getCorDasPenas() {
         return CorDasPenas;
     }
 
