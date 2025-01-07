@@ -1,0 +1,49 @@
+create DATABASE mercado;
+-- Criando a tabela de categorias
+CREATE TABLE categoria (
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL
+);
+
+-- Criando a tabela de produtos
+CREATE TABLE produto (
+    id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    id_categoria INT,
+    estoque INT NOT NULL DEFAULT 0,
+    preco DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
+);
+
+-- Criando a tabela de movimentações de estoque
+CREATE TABLE movimentacao (
+    id_movimentacao INT AUTO_INCREMENT PRIMARY KEY,
+    id_produto INT NOT NULL,
+    tipo_movimentacao ENUM('entrada', 'saida') NOT NULL,
+    quantidade INT NOT NULL,
+    data_movimentacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+);
+DELIMITER $$
+
+CREATE FUNCTION verificar_estoque_baixo()
+RETURNS VARCHAR(255)
+DETERMINISTIC
+BEGIN
+    DECLARE resultado VARCHAR(255);
+
+    -- Verifica se existe algum produto com estoque abaixo de 10
+    SELECT GROUP_CONCAT(nome SEPARATOR ', ')
+    INTO resultado
+    FROM produto
+    WHERE estoque < 10;
+
+    -- Retorna uma mensagem com os produtos de estoque baixo
+    IF resultado IS NULL THEN
+        RETURN 'Nenhum produto com estoque baixo.';
+    ELSE
+        RETURN CONCAT('Estoque baixo para: ', resultado);
+    END IF;
+END$$
+
+DELIMITER ;
