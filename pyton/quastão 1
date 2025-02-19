@@ -1,0 +1,6 @@
+numero = input("Digite um número de cinco dígitos: ")  # Captura como string
+
+if len(numero) == 5 and numero.isdigit():  # leen so funciona para numeros  Verifica se tem 5 dígitos
+    print("   ".join(numero))  # Junta os dígitos com 3 espaços
+else:
+    print("Erro: Digite exatamente 5 dígitos numéricos.")
